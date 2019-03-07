@@ -20,11 +20,12 @@ sh "docker tag docker_html_exam:latest bmalinga/docker_html_exam:latest"
 sh "docker push bmalinga/docker_html_exam:latest"
 }
 
-stage('Apply changes to the environment') {
+stage('Apply changes to the environment') 
+{
 sh "ls -l"
 }
 stage('Deploy(Docker run the image)')
 {
-sh "Docker run -d -p 7088:80/tcp docker_html_exam:latest"
+sh "docker run -d -p 7088:80/tcp docker_html_exam:latest"
 }
 }
