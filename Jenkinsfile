@@ -25,6 +25,6 @@ sh "ls -l"
 }
 stage('Deploy(Docker run the image)')
 {
-sh "Docker run -d -p 7088:80/tcp docker_html_exam:latest"
+sh "Docker run -d -p 7088:80/tcp docker_test:latest"
 }
 }
