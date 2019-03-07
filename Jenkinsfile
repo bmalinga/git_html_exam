@@ -16,7 +16,7 @@ sh "docker build -t docker_html_exam:latest ."
 
 stage('Docker login to hub and push the image'){
 sh "docker login -u 'bmalinga' -p 'Dig!DevopsT3@m' "
-sh "docker tag docker_test:latest bmalinga/docker_html_exam:latest"
+sh "docker tag docker_html_exam:latest bmalinga/docker_html_exam:latest"
 sh "docker push bmalinga/docker_html_exam:latest"
 }
 
