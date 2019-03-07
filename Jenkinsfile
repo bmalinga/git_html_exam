@@ -11,7 +11,7 @@ sh "ls -l"
 
 stage('Build docker image'){
 
-sh "docker build -t docker_test:latest ."
+sh "docker build -t docker_html_exam:latest ."
 }
 
 stage('Docker login to hub and push the image'){
@@ -25,6 +25,6 @@ sh "ls -l"
 }
 stage('Deploy(Docker run the image)')
 {
-sh "Docker run -d -p 7088:80/tcp docker_test:latest"
+sh "Docker run -d -p 7088:80/tcp docker_html_exam:latest"
 }
 }
